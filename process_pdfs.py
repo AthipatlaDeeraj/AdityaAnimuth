@@ -11,12 +11,11 @@ DetectorFactory.seed = 0
 def is_likely_heading(text, font_size, main_text_size, font_flags, position_y, page_height):
     if not text or len(text.strip()) < 2:
         return False
-    clean_text = text.strip()
     if len(clean_text) > 200:
         return False
     words = clean_text.split()
     if len(words) > 10:
-        return False
+        return False 
     skip_patterns = [
         r'^\d+\s*$',
         r'^page\s+\d+',
